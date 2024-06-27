@@ -1,0 +1,44 @@
+
+  <div class="container">
+    <form [formGroup]="newForm" (ngSubmit)="save()">
+        <div class="mb-3">
+          <label for="ranking" class="form-label">Ranking</label>
+          <input type="text" formControlName="ranking" class="form-control" placeholder="Enter your ranking">
+        </div>
+      
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" formControlName="name" class="form-control" placeholder="Enter your name" name="username">
+          
+          <div class="alert alert-danger" *ngIf="newForm?.get('name')?.invalid && newForm?.get('name')?.touched">
+            <div *ngIf="newForm?.get('name')?.hasError('required')">Name is required</div>
+            <div *ngIf="newForm?.get('name')?.hasError('minlength')">Minimum length of 3 characters is required</div>
+          </div>
+          <label for="dob" class="form-label">dob</label>
+          <input type="date" formControlName="dob" class="form-control" placeholder="Enter your dob" name="dob">
+          <div class="alert alert-danger" *ngIf="newForm?.get('dob')?.invalid && newForm?.get('dob')?.touched">
+            <div *ngIf="newForm?.get('dob')?.hasError('required')">Date of Birth is required</div>
+          </div>
+          <label for="country" class="form-label">country</label>
+          <input type="text" formControlName="country" class="form-control" placeholder="Enter your country" name="country" >
+          <div class="alert alert-danger" *ngIf="newForm?.get('country')?.invalid && newForm?.get('country')?.touched">
+            <div *ngIf="newForm?.get('country')?.hasError('required')">Country is required</div>
+          </div>
+          <label for="score" class="form-label">score</label>
+          <input type="text" formControlName="score" class="form-control" placeholder="Enter your score" name="score">
+          <div class="alert alert-danger" *ngIf="newForm?.get('score')?.invalid && newForm?.get('score')?.touched">
+            <div *ngIf="newForm?.get('score')?.hasError('required')">Score is required</div>
+          </div>
+          
+        </div>
+      
+        <div class="alert alert-success" *ngIf="response && !errorOccurred">
+          Data inserted successfully!
+        </div>
+        <div class="alert alert-danger" *ngIf="errorOccurred">
+          Error occurred while saving data. Please try again later.
+        </div>
+      
+        <button type="submit" [disabled]="!newForm.valid">Save</button>
+      </form>
+  </div>

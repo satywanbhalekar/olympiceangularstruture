@@ -1,0 +1,25 @@
+<!-- <form >
+    <input type="text" name="name" [(ngModel)]="name" placeholder="Username" required>
+    <input type="date" name="dob" [(ngModel)]="dob" placeholder="Date of Birth"  required>
+    <input type="text" name="country" [(ngModel)]="country" placeholder="Country" required>
+    <input type="number" name="score" [(ngModel)]="score" placeholder="Score" required>
+    <button type="submit" (click)="updateData()" >Update</button>
+  </form>
+   -->
+
+  <form class="container">
+    <div class="mb-3">
+      <input type="text" name="name" [(ngModel)]="name" class="form-control" placeholder="Username" required>
+    </div>
+    <div class="mb-3">
+      <input type="date" name="dob" [(ngModel)]="dob" class="form-control" placeholder="Date of Birth" required>
+    </div>
+    <div class="mb-3">
+      <input type="text" name="country" [(ngModel)]="country" class="form-control" placeholder="Country" required>
+    </div>
+    <div class="mb-3">
+      <input type="number" name="score" [(ngModel)]="score" class="form-control" placeholder="Score" required>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="updateData()">Update</button>
+  </form>
+  

@@ -1,0 +1,20 @@
+
+<div class="container">
+    <p>studentlist works!</p>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let std of students">
+            <td>{{std.name}}</td>
+            <td>{{std.age}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
+

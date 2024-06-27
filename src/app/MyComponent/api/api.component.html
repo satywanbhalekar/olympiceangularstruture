@@ -1,0 +1,29 @@
+
+
+  <div class="container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">USER_ID</th>
+          <th scope="col">UserName</th>
+          <th scope="col">Country</th>
+          <th scope="col">Score</th>
+          <th scope="col">ACTIONS</th> <!-- New column for delete button -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of posts">
+          <td>{{ p._id }}</td>
+          <td>{{ p.name }}</td>
+          <td>{{ p.country }}</td>
+          <td>{{ p.score }}</td>
+          <td>
+            <button (click)="deletePost(p._id)">Delete</button> <!-- Delete button -->
+            <button (click)="navigateToUpdate(p._id)">Update</button> <!-- Update button -->
+            <!-- Update button -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
