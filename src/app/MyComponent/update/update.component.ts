@@ -7,7 +7,7 @@ import { PostService } from 'src/app/Service/post.service'; // Adjust the import
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })
-export class UpdateComponent implements OnInit {
+export class UpdateComponent {
   postId: string | null = null;
   name: string = '';
   dob: string = '';

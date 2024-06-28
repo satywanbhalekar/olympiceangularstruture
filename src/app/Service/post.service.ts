@@ -1,8 +1,8 @@
 
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, map, of } from 'rxjs';
-import { Post } from './post.model';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -59,15 +59,16 @@ export class PostService {
     return this.httpClient.get(this.url);
   }
   
+  createPost(newPost: any) {
+    return this.httpClient.post(this.url, newPost);
+  }
 
   deletePost(postId: string) {
     const deleteUrl = `${this.url}/${postId}`; // Construct the URL for deleting a specific post
     return this.httpClient.delete(deleteUrl);
   }
 
-  createPost(newPost: any) {
-    return this.httpClient.post(this.url, newPost);
-  }
+  
 
   updatePost(postId: string, updatedPost: any) {
     const updateUrl = `${this.url}/${postId}`; // Construct the URL for updating a specific post

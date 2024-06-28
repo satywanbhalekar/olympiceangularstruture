@@ -7,7 +7,7 @@ import { PostService } from 'src/app/Service/post.service';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class FormComponent{
   newForm!: FormGroup; // Use '!' to tell TypeScript that it will be initialized in ngOnInit()
 
   response: boolean = false;
