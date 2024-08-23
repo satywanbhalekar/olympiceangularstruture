@@ -7,6 +7,9 @@ import { catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ServiceService {
+  getUser(): any {
+    throw new Error('Method not implemented.');
+  }
 
   private authUrl = 'http://localhost:30001/api/auth/signin';
   private registerUrl = 'http://localhost:30001/api/auth/signup'; // Registration endpoint

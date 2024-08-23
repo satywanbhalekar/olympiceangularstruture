@@ -1,0 +1,40 @@
+<div class="container">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="firstName">First Name:</label>
+        <input id="firstName" formControlName="firstName">
+        <div *ngIf="myForm.get('firstName')?.invalid && myForm.get('firstName')?.touched">
+            First Name is required and should be at least 2 characters.
+          </div>
+          
+      </div>
+  
+      <div>
+        <label for="lastName">Last Name:</label>
+        <input id="lastName" formControlName="lastName">
+        <div *ngIf="myForm.get('lastName')?.invalid && myForm.get('lastName')?.touched">
+            Last Name is required and should be at least 2 characters.
+          </div>
+      </div>
+  
+      <div>
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email">
+        <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+            Please enter a valid email.
+          </div>
+      </div>
+  
+      <div>
+        <label for="phoneNumber">Phone Number:</label>
+        <input id="phoneNumber" formControlName="phoneNumber">
+        <div *ngIf="myForm.get('phoneNumber')?.invalid && myForm.get('phoneNumber')?.touched">
+            Phone Number is required and should be 10 digits.
+          </div>
+          
+      </div>
+  
+      <button type="submit" [disabled]="myForm.invalid">Submit</button>
+    </form>
+  </div>
+  

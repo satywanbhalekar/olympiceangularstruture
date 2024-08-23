@@ -9,6 +9,7 @@ import { ServiceService } from './Service/service.service';
 })
 export class AppComponent {
 
+
   constructor(public authService: ServiceService, private router: Router) {}
 
   logout() {
@@ -17,4 +18,5 @@ export class AppComponent {
     // Redirect the user to the login page
     this.router.navigate(['/login']);
   }
+
 }

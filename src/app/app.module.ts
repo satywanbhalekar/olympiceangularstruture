@@ -17,6 +17,9 @@ import { LoginComponent } from './MyComponent/login/login.component';
 import { SignupComponent } from './MyComponent/signup/signup.component';
 import { UpdateComponent } from './MyComponent/update/update.component';
 import { PagenotfoundComponent } from './MyComponent/pagenotfound/pagenotfound.component';
+import { OauthComponent } from './MyComponent/oauth/oauth.component';
+import { HomeComponent } from './MyComponent/home/home.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 
 
@@ -40,6 +43,9 @@ import { PagenotfoundComponent } from './MyComponent/pagenotfound/pagenotfound.c
     SignupComponent,
     UpdateComponent,
     PagenotfoundComponent,
+    OauthComponent,
+    HomeComponent,
+    ReactiveFormsComponent,
 
   
    

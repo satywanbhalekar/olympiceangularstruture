@@ -8,10 +8,16 @@ import { SignupComponent } from './MyComponent/signup/signup.component';
 import { UpdateComponent } from './MyComponent/update/update.component';
 import { AuthGuard } from './guards/auth.guard'; // Import the AuthGuard
 import { PagenotfoundComponent} from './MyComponent/pagenotfound/pagenotfound.component';
+import { OauthComponent } from './MyComponent/oauth/oauth.component';
+import { HomeComponent } from './MyComponent/home/home.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 
 
 
 const routes: Routes = [
+  { path: '', component: HomeComponent },
+  
+  { path: 'rforms', component: ReactiveFormsComponent },
 
   { path: 'user/about', component: AboutComponent, canActivate: [AuthGuard] },
   { path: 'form', component: FormComponent },
@@ -19,6 +25,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'update/:id', component: UpdateComponent },
+  { path: 'oauth', component: OauthComponent },
   { path: '**', pathMatch: 'full',  
   component: PagenotfoundComponent }
 
