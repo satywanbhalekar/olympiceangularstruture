@@ -11,12 +11,12 @@ export class ServiceService {
     throw new Error('Method not implemented.');
   }
 
-  private authUrl = 'http://localhost:30001/api/auth/signin';
-  private registerUrl = 'http://localhost:30001/api/auth/signup'; // Registration endpoint
+  private authUrl = 'http://localhost:30001/api/user/login';
+  private registerUrl = 'http://localhost:30001/api/user/register'; // Registration endpoint
 
   constructor(private httpClient: HttpClient) { }
 
-  authenticateUser(credentials: { username: string, password: string }) {
+  authenticateUser(credentials: { email: string, password: string }) {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
